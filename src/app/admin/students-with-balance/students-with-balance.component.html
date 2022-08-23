@@ -1,0 +1,30 @@
+<!-- <p>students-with-balance works!</p> -->
+
+<div class="products" *ngIf="student.length; else noStudent">
+    <div >
+      <div class="display">
+        <div class="form-group">
+          <!-- <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="filter" id="listSearch"> -->
+        </div>
+       <h3 id="student-head">Students with balance</h3>
+          <table>
+            <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Year</th>
+            <th>Balance</th>
+          </tr>
+            <tr *ngFor="let students of student">
+              <td>{{students.name}} </td>
+              <td>{{students.gender }}</td>
+              <td>{{students.student_class}}</td>
+              <td>{{students.balance}}</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noStudent>
+    <p>No Students</p>
+  </ng-template>

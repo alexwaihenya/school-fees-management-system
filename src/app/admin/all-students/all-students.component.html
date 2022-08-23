@@ -1,0 +1,34 @@
+<!-- <p>all-students works!</p> -->
+<div class="products" *ngIf="student.length; ">
+    <div >
+      <div class="display">
+        <div class="form-group">
+         
+       <h3> All Students</h3>
+
+       <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="filter" id="listSearch">
+          <table>
+            <tr>
+            <th>name</th>
+            <th>gender</th>
+            <th>form</th>
+            <th>balance</th>
+          </tr>
+            <tr *ngFor="let students of student">
+              <td>{{students.name}} </td>
+              <td>{{students.gender }}</td>
+              <td>{{students.student_class}}</td>
+              <td>{{students.balance}}</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+  </div>
+  
+<!-- <ng-template #nostudent>
+
+  <p>No students at the moment</p>
+
+</ng-template> -->
+
+

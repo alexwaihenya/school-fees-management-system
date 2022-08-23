@@ -1,0 +1,28 @@
+<!-- <p>admin-dashboard works!</p>
+
+<div class="admin-section">
+    <div class="buttons">
+        <button (click)="onAdd()">Add Student</button>
+        <button>All Student</button>
+        <button>Balance</button>
+        <button>No Balance</button>
+
+    </div>
+
+    <div class="">
+
+    </div>
+</div> -->
+<div class="main" [ngStyle]="{ display: 'flex', gap: '150px', 'margin-top': '20px' }">
+    <div class="left" [ngStyle]="{ display: 'flex', 'flex-direction': 'column', gap: '20px' }">
+      <h3> Admin Panel</h3>
+      <a (click)="getAllStudents()" routerLink="admin-dashboard" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}" >All Students</a>
+      <a (click)="addStudent()" routerLink="admin-dashboard/addstudent" routerLinkActive="active">Add New Student</a>
+      <a (click)="studentsWithBalance()" routerLink="admin-dashboard/balance" routerLinkActive="active" >Students With Balance</a>
+      <a (click)="studentsWithNoBalance()" routerLink="admin-dashboard/nobalance" routerLinkActive="active"  >Students With no balance</a>
+     
+    </div>
+    <div class="right">
+      <!-- <router-outlet></router-outlet> -->
+  </div>
+<router-outlet></router-outlet>

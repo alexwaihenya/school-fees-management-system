@@ -1,0 +1,26 @@
+<!-- <p>login works!</p> -->
+
+<div class="container">
+
+    <div class="form-container">
+
+        <div class="form-styling"  action="">
+            <h2>Login</h2>
+            <p *ngIf=empty [ngStyle]="{ 'color':'red'}"> wrong credentials!!!!</p>
+
+    
+            <label for="email">Email</label><br>
+            <input type="email"  [(ngModel)]="staticdata.email"><br> 
+            <label for="password">Password</label><br>
+            <input type="password"  [(ngModel)]="staticdata.password"><br>
+            <input [ngStyle]="{'width':'100%'}" type="submit" (click)="onLogin()" id="btn-submit" value="Login">
+        </div>
+    </div>
+
+
+    
+
+</div>
+
+
+

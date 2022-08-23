@@ -1,0 +1,29 @@
+<!-- <p>add-students works!</p> -->
+    <div class="register">
+        <h2>Register</h2>
+        <p *ngIf=empty [ngStyle]="{'color':'red'}">All fields required...</p>
+        <div>
+
+            <label for="studentname">Name</label><br>
+            <input type="text"  [(ngModel)]="studentdetails.name"><br>
+
+            <label for="balance">Balance</label><br>
+            <input type="text"  [(ngModel)]="studentdetails.balance"><br>
+            <label for="class">Class</label>
+           
+            <select [ngStyle]="{'margin-bottom':'8px','margin-right':'8px'}" class="options"  [(ngModel)]="studentdetails.student_class">
+                <option value="Form 1" >Form 1</option>
+                <option value="Form 2" >Form 2</option>
+                <option value="Form 3" >Form 3</option>
+                <option value="Form 4" >Form 4</option>
+            </select>
+            <label for="gender">Gender</label>
+            <select  [(ngModel)]="studentdetails.gender">
+                <option value="male">Male</option>
+                <option value="female" >Female</option>
+            </select><br>
+            <input [ngStyle]="{'width':'100%'}" type="submit" (click)="onAdd()" value="Register" >
+
+        </div>
+
+    </div>
