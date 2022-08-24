@@ -13,7 +13,7 @@ export class StudentsWithBalanceComponent implements OnInit {
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.student = this.studentService.getAllStudent().filter(v=>v.balance)
+    this.student = this.studentService.getAllStudent().filter(v=>v.balance >0)
 
   }
 

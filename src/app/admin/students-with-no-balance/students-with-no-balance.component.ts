@@ -10,13 +10,13 @@ import { StudentService } from 'src/app/services/student.service';
 export class StudentsWithNoBalanceComponent implements OnInit {
 
   student!:student[]
-  filter=''
-  nobalance=''
+  // filter=''
+  // nobalance=''
 
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.student = this.studentService.getAllStudent().filter(v=>v.balance ===0)
+    this.student = this.studentService.getAllStudent().filter(v=>v.balance <=0)
   }
 
 }

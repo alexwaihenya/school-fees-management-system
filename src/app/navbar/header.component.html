@@ -16,11 +16,11 @@
         <a routerLink="/logout">Logout</a>
     </div>
 </nav> -->
-<div class="navbar" [ngStyle]="{'height':'70', 'display':'flex', 'justify-content':'space-around', 'background-color':'purple','color':'white','align-items':'center'}">
-    <div [ngStyle]="{}">TheJitu</div>
-    <div>Welcome to The Jitu School </div>
-    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px','margin-bottom':'6px','border-outline':'none', 'border-radius':'16px'}" (click)="onLogout()" *ngIf="authService.isLoggedIn()">Logout</button>
-    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px', 'margin-bottom':'6px','border-outline':'none','border-radius':'16px'}" (click)="onclick()" *ngIf="!authService.isLoggedIn()">Login</button>
+<div  appHeader >
+    <h2>TheJitu</h2>
+    <h2>Welcome to The Jitu School </h2>
+    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px','margin-bottom':'6px','border':'none', 'border-radius':'16px'}" (click)="onLogout()" *ngIf="!authService.isLoggedIn()">Logout</button>
+    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px', 'margin-bottom':'6px','border':'none','border-radius':'16px'}" (click)="onclick()" *ngIf="authService.isLoggedIn()">Login</button>
   
   
   </div>

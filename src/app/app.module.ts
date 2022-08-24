@@ -15,6 +15,7 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ErrorComponent } from './error/error.component';
+import { HeaderDirective } from './custom-directives/header.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ErrorComponent } from './error/error.component';
     LoginComponent,
     AdminDashboardComponent,
     HomepageComponent,
-    ErrorComponent
+    ErrorComponent,
+    HeaderDirective
   ],
   imports: [
     BrowserModule,

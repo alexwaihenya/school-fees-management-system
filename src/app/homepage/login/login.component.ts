@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { data } from 'src/app/interfaces/data';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
+
 
 
 @Component({
@@ -11,41 +12,42 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
- 
 
-  staticdata:data={
-    email:"",
-    password:""
+
+  staticdata: data = {
+    email: "",
+    password: ""
   }
-  empty =false
+  empty = false
 
- 
-  
 
-  constructor(private authService:AuthService , private router:Router) { }
+
+
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
-  onLogin(){
-    if(this.staticdata.email==="alex@gmail.com" && this.staticdata.password==="12345678"){
-     
+  onLogin() {
+    if (this.staticdata.email === this.authService.inputData.email && this.staticdata.password === this.authService.inputData.password) {
+
+      localStorage.setItem('email',this.staticdata.email)
+      localStorage.setItem('password',this.staticdata.password)
+
 
       this.router.navigate(['admin'])
-      // console.log(true);
-   
-      
-      
-    }else{
-      
+
+
+    } else {
+
       console.log('Invalid details');
       this.empty = true
-      setTimeout(()=>{
+      setTimeout(() => {
         this.empty = false
-      },1000)
-      
+      }, 1000)
+
     }
-   
-    
+
+
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../services/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['home/login'])
   }
   onLogout(){
+    localStorage.clear()
     this.router.navigate(['home'])
   }
 

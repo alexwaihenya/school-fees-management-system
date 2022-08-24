@@ -31,10 +31,7 @@ export class StudentService {
 
     }
   ]
-  getStudent(index:number){
-    return this.students[index]
-  }
-
+ 
   getAllStudent(){
     return this.students
   }
@@ -43,9 +40,9 @@ export class StudentService {
     return this.students.push(student)
   }
   studentBalance(){
-    this.students.filter(v=> v.balance)
+    this.students.filter(v=> v.balance >0)
   }
   studentWithNoBalance(){
-     this.students.filter(v=>v.balance ===0)
+     this.students.filter(v=>v.balance <=0)
   }
 }
