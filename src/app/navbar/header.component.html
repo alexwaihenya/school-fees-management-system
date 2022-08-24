@@ -19,8 +19,8 @@
 <div  appHeader >
     <h2>TheJitu</h2>
     <h2>Welcome to The Jitu School </h2>
-    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px','margin-bottom':'6px','border':'none', 'border-radius':'16px'}" (click)="onLogout()" *ngIf="!authService.isLoggedIn()">Logout</button>
-    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px', 'margin-bottom':'6px','border':'none','border-radius':'16px'}" (click)="onclick()" *ngIf="authService.isLoggedIn()">Login</button>
+    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px','margin-bottom':'6px','border':'none', 'border-radius':'16px'}" (click)="onLogout()" *ngIf="authService.isLoggedIn()">Logout</button>
+    <button [ngStyle]="{'height':'24px', 'width':'70px',  'margin-top':'15px', 'margin-bottom':'6px','border':'none','border-radius':'16px'}" (click)="onclick()" *ngIf="!authService.isLoggedIn()">Login</button>
   
   
   </div>

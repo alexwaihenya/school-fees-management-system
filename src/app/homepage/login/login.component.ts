@@ -26,26 +26,31 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    localStorage.setItem('email','mercy@gmail.com')
+    localStorage.setItem('password','alex')
   }
   onLogin() {
-    if (this.staticdata.email === this.authService.inputData.email && this.staticdata.password === this.authService.inputData.password) {
+    // if (this.staticdata.email === this.authService.inputData.email && this.staticdata.password === this.authService.inputData.password) {
 
-      localStorage.setItem('email',this.staticdata.email)
-      localStorage.setItem('password',this.staticdata.password)
+      localStorage.getItem('email')
+      localStorage.getItem('password')
+      localStorage.setItem('token','dfghjkl;rtyuiopdfgyuildfghjkl')
 
 
       this.router.navigate(['admin'])
 
+      
 
-    } else {
 
-      console.log('Invalid details');
-      this.empty = true
-      setTimeout(() => {
-        this.empty = false
-      }, 1000)
+    // } else {
 
-    }
+    //   console.log('Invalid details');
+    //   this.empty = true
+    //   setTimeout(() => {
+    //     this.empty = false
+    //   }, 1000)
+
+    // }
 
 
   }

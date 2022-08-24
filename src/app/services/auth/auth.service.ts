@@ -10,19 +10,19 @@ export class AuthService {
 
   
 
-  inputData:data={
-    email:"alex@gmail.com",
-    password:"12345678"
+  // inputData:data={
+  //   email:"alex@gmail.com",
+  //   password:"12345678"
 
-  }
+  // }
   isLoggedIn(){
-    return this.inputData
+    return  !!localStorage.getItem('token')
     
   }
 
-  authenticated(){
-    return  localStorage.getItem('email')===this.isLoggedIn().email && localStorage.getItem('password')===this.isLoggedIn().password
-  }
+  // authenticated(){
+  //   return  localStorage.getItem('email')===this.isLoggedIn().email && localStorage.getItem('password')===this.isLoggedIn().password
+  // }
 
   constructor() { }
 }
